@@ -1,0 +1,31 @@
+
+import com.mongodb.client.*;
+import org.bson.Document;
+
+public class DatabaseConnectivityMongoDB {
+    static MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
+    static MongoDatabase database = mongoClient.getDatabase("EmployeeManagementApp");
+    static MongoCollection<Document> collection = database.getCollection("employee");
+
+    public static void store(Employee emp) {
+        Document doc = new Document();
+        doc.append("name", emp.getName()).append("age", emp.getAge()).append("salary", emp.getSalary())
+                .append("designation", emp.getDesignation()).append("department", emp.getDepartment());
+        collection.insertOne(doc);
+    }
+
+    public static void display(String criteria) {
+        Bson sort = Sorts.ascending(criteria);
+        for (Document d : i) {
+            System.out.println(d.toJson());
+        }
+    }
+
+    public static void delete(int EID) {
+
+    }
+
+    public static void search(String crtieria, String Value) {
+
+    }
+}
