@@ -11,15 +11,26 @@ public class TestApp {
             int choice = menu.readChoice(6);
 
             switch (choice) {
-                case 1 -> EmployeeHandler.createEmployee();
-                case 2 -> EmployeeHandler.displayAll();
-                case 3 -> DatabaseConnectivity.appraisal();
-                case 4 -> EmployeeHandler.deleteEmployee();
-                case 5 -> EmployeeHandler.searchEmployee();
-                case 6 -> {
+                case 1:
+                    EmployeeHandler.createEmployee();
+                    break;
+                case 2:
+                    EmployeeHandler.displayAll();
+                    break;
+                case 3:
+                    DatabaseConnectivity.appraisal();
+                    break;
+                case 4:
+                    EmployeeHandler.deleteEmployee();
+                    break;
+                case 5:
+                    EmployeeHandler.searchEmployee();
+                    break;
+                case 6:
                     return;
-                }
-                default -> System.out.println("Invalid choice. Please try again.");
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    break;
             }
         }}
         catch(Exception e){

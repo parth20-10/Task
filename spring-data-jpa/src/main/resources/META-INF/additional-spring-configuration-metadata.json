@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "sprring.datasource.password",
+  "type": "java.lang.String",
+  "description": "A description for 'sprring.datasource.password'"
+}]}
